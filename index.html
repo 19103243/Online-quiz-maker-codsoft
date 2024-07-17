@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="home-page">
+            <h1>Welcome to Online Quiz Maker</h1>
+            <button onclick="showCreateQuizPage()">Create Quiz</button>
+            <button onclick="showTakeQuizPage()">Take Quiz</button>
+        </div>
+        <div id="create-quiz-page" class="hidden">
+            <h2>Create a New Quiz</h2>
+            <form id="create-quiz-form">
+                <input type="text" id="quiz-title" placeholder="Quiz Title" required>
+                <div id="questions">
+                    <div class="question">
+                        <input type="text" placeholder="Question" required>
+                        <input type="text" placeholder="Option 1" required>
+                        <input type="text" placeholder="Option 2" required>
+                        <input type="text" placeholder="Option 3" required>
+                        <input type="text" placeholder="Option 4" required>
+                        <input type="text" placeholder="Correct Answer" required>
+                    </div>
+                </div>
+                <button type="button" onclick="addQuestion()">Add Question</button>
+                <button type="submit">Submit Quiz</button>
+            </form>
+        </div>
+        <div id="take-quiz-page" class="hidden">
+            <h2>Available Quizzes</h2>
+            <ul id="quiz-list"></ul>
+        </div>
+        <div id="quiz-page" class="hidden">
+            <h2 id="quiz-title-display"></h2>
+            <div id="quiz-questions"></div>
+            <button id="submit-quiz-button" onclick="submitQuiz()">Submit Quiz</button>
+        </div>
+        <div id="results-page" class="hidden">
+            <h2>Quiz Results</h2>
+            <div id="results"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
